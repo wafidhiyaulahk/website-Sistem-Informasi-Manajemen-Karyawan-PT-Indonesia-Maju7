@@ -1,0 +1,241 @@
+<html>
+<head>
+    <title>Data Divisi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .header a {
+            background-color: #007bff;
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 5px 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .header a:hover {
+            background-color: #0056b3;
+        }
+        .table-container {
+            margin-top: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .table-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table-container th, .table-container td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .table-container th {
+            background-color: #f1f1f1;
+        }
+        .table-container tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container .actions i {
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .table-container .actions .edit {
+            color: #007bff;
+        }
+        .table-container .actions .delete {
+            color: #dc3545;
+        }
+        .table-container .table-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .table-container .table-header select, .table-container .table-header input {
+            padding: 5px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function searchTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("search");
+            filter = input.value.toUpperCase();
+            table = document.querySelector("table");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 1; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container" id="divisi.html">
+        <div class="header">
+            <h1>Data Divisi</h1>
+            <a href="tambah_divisi.html">+ Tambah Divisi</a>
+        </div>
+        <div class="table-container">
+            <div class="table-header">
+                <div>
+                    <label for="entries">Show</label>
+                    <select id="entries">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    <label for="entries">entries</label>
+                </div>
+               
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th >Kode Divisi</th>
+                        <th>Nama Divisi</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>MAN</td>
+                        <td>Manajemen</td>
+                        <td class="actions">
+                            <i class="fas fa-edit edit"></i>
+                            <i class="fas fa-trash delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>KEU</td>
+                        <td>Keuangan</td>
+                        <td class="actions">
+                            <i class="fas fa-edit edit"></i>
+                            <i class="fas fa-trash delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>TI</td>
+                        <td>Teknologi Informasi</td>
+                        <td class="actions">
+                            <i class="fas fa-edit edit"></i>
+                            <i class="fas fa-trash delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>PEM</td>
+                        <td>Pemasaran</td>
+                        <td class="actions">
+                            <i class="fas fa-edit edit"></i>
+                            <i class="fas fa-trash delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>OPS</td>
+                        <td>Operasional</td>
+                        <td class="actions">
+                            <i class="fas fa-edit edit"></i>
+                            <i class="fas fa-trash delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>SDM</td>
+                        <td>Sumber Daya Manusia</td>
+                        <td class="actions">
+                            <i class="fas fa-edit edit"></i>
+                            <i class="fas fa-trash delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>KOM</td>
+                        <td>Komisaris</td>
+                        <td class="actions">
+                            <i class="fas fa-edit edit"></i>
+                            <i class="fas fa-trash delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>STF</td>
+                        <td>Staff</td>
+                        <td class="actions">
+                            <i class="fas fa-edit edit"></i>
+                            <i class="fas fa-trash delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>MGR</td>
+                        <td>Manager</td>
+                        <td class="actions">
+                            <i class="fas fa-edit edit"></i>
+                            <i class="fas fa-trash delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>SPV</td>
+                        <td>Supervisor</td>
+                        <td class="actions">
+                            <i class="fas fa-edit edit"></i>
+                            <i class="fas fa-trash delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>KBG</td>
+                        <td>Kepala Bagian</td>
+                        <td class="actions">
+                            <i class="fas fa-edit edit"></i>
+                            <i class="fas fa-trash delete"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

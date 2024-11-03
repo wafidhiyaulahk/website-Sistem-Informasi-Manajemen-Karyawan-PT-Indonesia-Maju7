@@ -1,0 +1,228 @@
+<html>
+<head>
+    <title>Daftar Lembur Karyawan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">    
+    <link rel="stylesheet" href="stylelembur.css">
+</head>
+<body>
+    <h1>Daftar Lembur Karyawan</h1>
+    <div class="entries-container" id="lembur.html">
+        Show 
+        <select id="entriesSelect" onchange="changeEntries()">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+        entries
+    </div>
+    <div class="search-container">
+        <label for="search">Search Status:</label>
+        <input type="text" id="search" name="search" onkeyup="filterTable()">
+    </div>
+    <div class="select-container">
+        <label for="rowSelect">Select Row:</label>
+        <select id="rowSelect">
+            <option value="none">--Select Row--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+        </select>
+    </div>
+    <div class="table-container">
+        <table id="overtimeTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Tanggal</th>
+                    <th>Jam Lembur Mulai | Berakhir</th>
+                    <th>Keperluan Lembur</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Aisyah Nur</td>
+                    <td>2023-05-10</td>
+                    <td>10:35:00 | 15:35:00</td>
+                    <td>Project A</td>
+                    <td>Menunggu Konfirmasi</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Budi Santoso</td>
+                    <td>2023-05-09</td>
+                    <td>11:05:00 | 04:05:00</td>
+                    <td>Meeting</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Clara Setiawan</td>
+                    <td>2023-05-04</td>
+                    <td>17:00:00 | 17:00:00</td>
+                    <td>Development</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dian Prasetyo</td>
+                    <td>2023-05-03</td>
+                    <td>17:00:00 | 21:37:00</td>
+                    <td>Testing</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Eka Putri</td>
+                    <td>2023-04-30</td>
+                    <td>01:46:00 | 04:46:00</td>
+                    <td>Documentation</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Faisal Rahman</td>
+                    <td>2023-04-28</td>
+                    <td>17:00:00 | 20:51:00</td>
+                    <td>Maintenance</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Gilang Saputra</td>
+                    <td>2023-04-27</td>
+                    <td>09:00:00 | 12:00:00</td>
+                    <td>Support</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Hana Pramesti</td>
+                    <td>2023-04-26</td>
+                    <td>14:00:00 | 18:00:00</td>
+                    <td>Review</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Irfan Hidayat</td>
+                    <td>2023-04-25</td>
+                    <td>08:00:00 | 12:00:00</td>
+                    <td>Audit</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Joko Widodo</td>
+                    <td>2023-04-24</td>
+                    <td>13:00:00 | 17:00:00</td>
+                    <td>Planning</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Karen Hartanto</td>
+                    <td>2023-04-23</td>
+                    <td>10:00:00 | 14:00:00</td>
+                    <td>Design</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Lina Saputri</td>
+                    <td>2023-04-22</td>
+                    <td>09:00:00 | 13:00:00</td>
+                    <td>Analysis</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Mahesa Wijaya</td>
+                    <td>2023-04-21</td>
+                    <td>11:00:00 | 15:00:00</td>
+                    <td>Project B</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Nina Kartika</td>
+                    <td>2023-04-20</td>
+                    <td>12:00:00 | 16:00:00</td>
+                    <td>Training</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Omar Abdullah</td>
+                    <td>2023-04-19</td>
+                    <td>14:00:00 | 18:00:00</td>
+                    <td>Deployment</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Putri Ayu</td>
+                    <td>2023-04-18</td>
+                    <td>15:00:00 | 19:00:00</td>
+                    <td>Meeting</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Qori Ananda</td>
+                    <td>2023-04-17</td>
+                    <td>16:00:00 | 20:00:00</td>
+                    <td>Support</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Renate Nindya</td>
+                    <td>2023-04-16</td>
+                    <td>17:00:00 | 21:00:00</td>
+                    <td>Review</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Rendi Saputra</td>
+                    <td>2023-04-15</td>
+                    <td>18:00:00 | 22:00:00</td>
+                    <td>Documentation</td>
+                    <td>Disetujui</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Yovan Fiqri</td>
+                    <td>2023-04-14</td>
+                    <td>19:00:00 | 23:00:00</td>
+                    <td>Maintenance</td>
+                    <td>Disetujui</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button class="btn" onclick="changeStatusWithOptions()">Ubah Status</button>
+    <script src="scriptlembur.js"></script>
+</body>
+</html>

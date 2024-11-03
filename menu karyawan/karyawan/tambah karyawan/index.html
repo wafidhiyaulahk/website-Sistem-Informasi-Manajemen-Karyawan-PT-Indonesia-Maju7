@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Karyawan</title>
+    <link rel="stylesheet" href="style tambah.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="dasbord/dasbord/karyawan/data_karyawan.html"><i class="fas fa-home"></i> Karyawan</a>
+            <span>/</span>
+            <a href="dasbord/karyawan/tambah_karyawan.html">Tambah Data Karyawan</a>
+        </div>
+        <h1>Tambah Data Karyawan</h1>
+        <form id="form-karyawan">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            <div class="form-group">
+                <label for="jenis-kelamin">Jenis Kelamin</label>
+                <select id="jenis-kelamin" name="jenis_kelamin" required>
+                    <option value="">--</option>
+                    <option value="laki-laki">Laki-laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="no-hp">No HP</label>
+                <input type="text" id="no-hp" name="no_hp" required>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <textarea id="alamat" name="alamat" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="jabatan">Jabatan</label>
+                <select id="jabatan" name="jabatan">
+                    <option value="">--</option>
+                    <option value="CEO">CEO</option>
+                    <option value="CFO">Chief Financial Officer (CFO)</option>
+                    <option value="CIO">Chief Information Officer (CIO)</option>
+                    <option value="CMO">Chief Marketing Officer (CMO)</option>
+                    <option value="COO">Chief Operations Officer (COO)</option>
+                    <option value="HRD">Manager Sumber Daya Manusia (HRD)</option>
+                    <option value="TI">Manager Teknologi Informasi (TI)</option>
+                    <option value="Manajer Pemasaran">Manajer Pemasaran</option>
+                    <option value="Komisaris">Komisaris</option>
+                    <option value="Direktur Keuangan">Direktur Keuangan</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Supervisor">Supervisor</option>
+                    <option value="Kepala Bagian">Kepala Bagian</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="divisi">Divisi</label>
+                <select id="divisi" name="divisi">
+                    <option value="">--</option>
+                    <option value="Manajemen">Manajemen</option>
+                    <option value="Keuangan">Keuangan</option>
+                    <option value="Teknologi Informasi">Teknologi Informasi</option>
+                    <option value="Pemasaran">Pemasaran</option>
+                    <option value="Operasional">Operasional</option>
+                    <option value="Sumber Daya Manusia">Sumber Daya Manusia</option>
+                    <option value="Komisaris">Komisaris</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Supervisor">Supervisor</option>
+                    <option value="Kepala Bagian">Kepala Bagian</option>
+                </select>
+            </div>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn-save" onclick="simpanDataKaryawan()"><i class="fas fa-save"></i> Simpan</button>
+                <button type="button" class="btn-cancel" onclick="batal()"><i class="fas fa-times"></i> Batal</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

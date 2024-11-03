@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Jabatan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="jabatan">
+    <div class="header">
+        <h1>Data Jabatan</h1>
+        <a href="tambah_divisi.html">+ Tambah Divisi</a>
+    </div>
+    <br>
+        <table id="jabatanTable">
+            <thead>
+                <tr>
+                    <th class="center">No</th>
+                    <th>Kode Jabatan</th>
+                    <th>Jabatan</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="center">1</td>
+                    <td>CEO</td>
+                    <td>Direksi atau CEO</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">2</td>
+                    <td>CFO</td>
+                    <td>Chief Financial Officer (CFO)</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">3</td>
+                    <td>CIO</td>
+                    <td>Chief Information Officer (CIO)</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">4</td>
+                    <td>CMO</td>
+                    <td>Chief Marketing Officer (CMO)</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">5</td>
+                    <td>COO</td>
+                    <td>Chief Operations Officer (COO)</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">6</td>
+                    <td>HRD</td>
+                    <td>Manager Sumber Daya Manusia (HRD)</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">7</td>
+                    <td>TI</td>
+                    <td>Manager Teknologi Informasi (TI)</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">8</td>
+                    <td>MP</td>
+                    <td>Manajer Pemasaran</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">9</td>
+                    <td>KOM</td>
+                    <td>Komisaris</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">10</td>
+                    <td>DK</td>
+                    <td>Direktur Keuangan</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">11</td>
+                    <td>KB</td>
+                    <td>Kepala Bagian</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">12</td>
+                    <td>STF</td>
+                    <td>Staff</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">13</td>
+                    <td>MGR</td>
+                    <td>Manager</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="center">14</td>
+                    <td>SPV</td>
+                    <td>Supervisor</td>
+                    <td class="action-icons">
+                        <i class="fas fa-edit edit"></i>
+                        <i class="fas fa-times delete"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+                
+        <div class="pagination">
+            <span id="page-info">Showing 1 to 5 of 14 entries</span>
+            <button id="prev-btn" class="disabled" onclick="changePage(currentPage - 1)">Previous</button>
+            <button onclick="changePage(1)">1</button>
+            <button onclick="changePage(2)">2</button>
+            <button onclick="changePage(3)">3</button>
+            <button id="next-btn" onclick="changePage(currentPage + 1)">Next</button>
+        </div>
+    </div>
+    <!-- Link ke file JavaScript eksternal -->
+    <script src="scriptj.js"></script>
+</body>
+</html>

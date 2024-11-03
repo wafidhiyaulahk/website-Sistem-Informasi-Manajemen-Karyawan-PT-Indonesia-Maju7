@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Karyawan</title>
+    <link rel="stylesheet" href="stylesdata.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container" id="karyawan">
+        <div class="header">
+            <h2>Data Karyawan</h2>
+            <button>
+                <a href="karyawan/karyawan/tambah karyawan/tambah.html"><i class="fas fa-plus"></i> Tambah Karyawan</a>
+            </button>
+        </div>
+        <div class="dataTables_wrapper">
+            <div class="dataTables_length">
+                <label>Show 
+                    <select name="entries" id="entries" aria-controls="example">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select> entries
+                </label>
+            </div>
+            <div class="dataTables_filter">
+                <label>Search:
+                    <input type="search" id="search" placeholder="" aria-controls="example">
+                </label>
+            </div>
+        </div>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th data-column="kode">Kode <i class="fas fa-sort sort-icon"></i></th>
+                    <th data-column="nama">Nama <i class="fas fa-sort sort-icon"></i></th>
+                    <th data-column="email">Email <i class="fas fa-sort sort-icon"></i></th>
+                    <th data-column="alamat">Alamat <i class="fas fa-sort sort-icon"></i></th>
+                    <th data-column="jabatan">Jabatan <i class="fas fa-sort sort-icon"></i></th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Data rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="scriptk.js"></script>
+</body>
+</html>

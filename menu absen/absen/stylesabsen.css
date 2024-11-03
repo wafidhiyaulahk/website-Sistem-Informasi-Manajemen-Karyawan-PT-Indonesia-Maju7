@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.dataTables_wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+.dataTables_length, .dataTables_filter {
+    margin-bottom: 20px;
+}
+.dataTables_length label, .dataTables_filter label {
+    font-size: 14px;
+}
+.dataTables_length select, .dataTables_filter input {
+    margin-left: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.text-center {
+    text-align: center;
+}
+.fa-eye {
+    color: #007bff;
+}

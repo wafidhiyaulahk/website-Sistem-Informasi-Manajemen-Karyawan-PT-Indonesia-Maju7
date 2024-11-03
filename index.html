@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script> 
+    function handleClick(section) {
+      document.getElementById('content').innerHTML = document.getElementById(section).innerHTML;
+    }
+
+    function logout() {
+      alert('Logging out...');
+    }
+  </script>
+</head>
+
+  <body>
+  
+  <div class="sidebar" id="sidebar">
+    <img src="assets/image/WhatsApp_Image_2024-09-23_at_23.51.39-removebg-preview.png" alt=" Logo perushaan " width="50" height="70">
+    <h3> Sistem Informasi <br>Manajemen Karyawan</h3>
+    <div class="divider">  </div>
+    <p>
+      <img src="assets/image/download.jpeg" alt="User Profile Picture">
+      <span>Welcome, Wafi Administrator</span>
+      
+    </p>
+    <a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    
+    <h3>MENU KARYAWAN</h3>
+    
+    <div class="submenu">
+      <a href="menu karyawan/karyawan/index.html" onclick="handleClick('karyawan')">
+        <i class="fas fa-users"></i> Karyawan</a>
+      <a id="jabatan" href="menu karyawan/jabatan/inde.html" onclick="handleClick('jabatan')"><i class="fas fa-briefcase"></i> Jabatan</a>
+      <a id="divisi" href="menu karyawan/divisi/index.html" onclick="handleClick('divisi')"><i class="fas fa-building"></i> Divisi</a>
+    </div>
+
+    <h3>MENU ABSENSI</h3>
+    <div class="submenu">
+      <a href="menu absen/absen/index.html" onclick="showKaryawanOutput()"><i class="fas fa-calendar-check"></i> Absensi</a>
+      <a href="menu absen/Izin karyawan/index.html" onclick="showKaryawanOutput()"><i class="fas fa-file-alt"></i> Izin</a>
+      <a href="menu absen/Lembur/index.html"onclick="showKaryawanOutput()"><i class="fas fa-clock"></i> Lembur</a>
+    </div>
+    
+    <h3>MENU PENGGAJIAN</h3>
+    <div class="submenu">
+      <a href="menu gaji/gaji/index.html" onclick="showKaryawanOutput()"><i class="fas fa-money-check-alt"></i> Slip Gaji</a>
+      <a href="menu gaji/slip gaji/index.html" onclick="showKaryawanOutput()"><i class="fas fa-print"></i> Cetak Slip Gaji</a>
+    </div>
+    
+    <h3>MENU LAPORAN</h3>
+    <div class="submenu">
+      <a href="#"><i class="fas fa-file-pdf"></i> Cetak Laporan</a>
+    </div>
+    
+    <h3>MENU ADMIN</h3>
+    <div class="submenu">
+      <a href="#"><i class="fas fa-user-cog"></i> Pengguna</a>
+    </div>
+    <a href="#" class="logout-button"><i class="fas fa-sign-out-alt" onclick="logout()"></i> Logout</a>
+  </div>
+  
+  <div class="main-content" id="main-content">
+    <div class="header">
+      <div class="logo-container">
+        <i class="fas fa-bars menu-icon" onclick="toggleSidebar()"></i>
+        
+      </div>
+      <div class="user-info">
+        <span><h1>Admin Dashboard</h1></span>
+        
+      </div>
+    </div>
+    
+    <div class="content-wrapper">
+      <h1 class="page-title">Sistem Informasi Manajemen Karyawan</h1>
+      <div class="dashboard">
+        <h2>Admin Dashboard</h2>
+        
+        <div class="cards">
+          <div class="card" style="background-color: #3498db; color: white;">
+            <i class="fas fa-user"></i>
+            <h3>Data Pegawai</h3>
+            <p>20</p>
+          </div>
+          <div class="card" style="background-color: #2ecc71; color: white;">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Absensi Hari Ini</h3>
+            <p>10</p>
+          </div>
+          <div class="card" style="background-color: #3498db; color: white;">
+            <i class="fas fa-envelope-open-text"></i>
+            <h3>Izin Menunggu Konfirmasi</h3>
+            <p>10</p>
+          </div>
+          <div class="card" style="background-color: #9b59b6; color: white;">
+            <i class="fas fa-clock"></i>
+            <h3>Lembur Menunggu Konfirmasi</h3>
+            <p>1</p>
+          </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <script src="scrip.js"></script>
+</body>
+</html>
